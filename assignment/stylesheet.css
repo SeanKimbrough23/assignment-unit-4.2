@@ -1,0 +1,97 @@
+@keyframes spin {
+    from {transform: translate(-50%, -50%) rotate(0);}
+    to   {transform: translate(-50%, -50%) rotate(360deg);}
+  }
+  .rotating-border {
+    --border-radius: 1rem;
+    --border-size: 0.5rem;
+    --border-bg: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+    --padding: 1rem;
+    
+    position: relative;
+    overflow: hidden;
+    font-size: 2rem;
+    padding: calc(var(--padding) + var(--border-size));
+    border-radius: var(--border-radius);
+    display: inline-block;
+    
+  }::before {
+      content: '';
+      display: block;
+      background: var(--border-bg);
+      width: calc(100% * 1.41421356237);
+      padding-bottom: calc(100% * 1.41421356237);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 100%;
+      z-index: -2;
+      animation: spin 5s linear infinite;
+    }
+    --reverse::before{
+      animation-direction: reverse;
+    }
+    ::after{
+      content: '';
+      position: absolute;
+      inset: var(--border-size);
+      background: white;
+      z-index: -1;
+      border-radius: calc(var(--border-radius) - var(--border-size));
+    }
+  
+
+
+
+header {
+    background-color: saddlebrown;
+    color: yellow ;
+    font-family: fantasy;
+}
+div {
+    background-color: aquamarine;
+    color: purple;
+    text-align: center;
+    font-family: fantasy;
+}
+body {
+   
+    text-align: center;
+  
+}
+html {
+    padding: 10px;
+    background-image: url("https://media2.giphy.com/media/1zRfp0Jwsag4yPekP4/giphy.gif");
+    background-repeat:inherit ;   
+    background-size:auto;
+
+
+}
+
+.rotating-border--black-white {
+    --border-radius: 100%;
+    --border-size: 1.0rem;
+    --border-bg: conic-gradient(
+      #fff 0.00turn 0.05turn, 
+      #333 0.05turn 0.10turn, 
+      #fff 0.10turn 0.15turn, 
+      #333 0.15turn 0.20turn, 
+      #fff 0.20turn 0.25turn, 
+      #333 0.25turn 0.30turn, 
+      #fff 0.30turn 0.35turn, 
+      #333 0.35turn 0.40turn, 
+      #fff 0.40turn 0.45turn, 
+      #333 0.45turn 0.50turn, 
+      #fff 0.50turn 0.55turn, 
+      #333 0.55turn 0.60turn, 
+      #fff 0.60turn 0.65turn, 
+      #333 0.65turn 0.70turn, 
+      #fff 0.70turn 0.75turn, 
+      #333 0.75turn 0.80turn, 
+      #fff 0.80turn 0.85turn, 
+      #333 0.85turn 0.90turn, 
+      #fff 0.90turn 0.95turn,
+      #333 0.95turn 1.00turn
+);
+}
