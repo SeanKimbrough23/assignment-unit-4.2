@@ -45,16 +45,29 @@
 
 
 header {
-    background-color: saddlebrown;
-    color: yellow ;
+    background-color: palevioletred;
+    color: aquamarine ;
     font-family: fantasy;
 }
-div {
+h1 {
     background-color: aquamarine;
-    color: purple;
+    color: hotpink;
     text-align: center;
     font-family: fantasy;
 }
+h2 {
+    background-color: aquamarine;
+    color: hotpink;
+    text-align: center;
+    font-family: fantasy;
+}
+h3 {
+    background-color: aquamarine;
+    color: hotpink;
+    text-align: center;
+    font-family: fantasy;
+}
+
 body {
    
     text-align: center;
@@ -69,29 +82,33 @@ html {
 
 }
 
-.rotating-border--black-white {
+.rotating-border {
+    border-style: solid;
     --border-radius: 100%;
-    --border-size: 1.0rem;
+   --border-size: 1.0rem;
     --border-bg: conic-gradient(
-      #fff 0.00turn 0.05turn, 
+      hsl(315, 70%, 47%) 0.00turn 0.05turn, 
       #333 0.05turn 0.10turn, 
-      #fff 0.10turn 0.15turn, 
+      hsl(315, 70%, 47%) 0.10turn 0.15turn, 
       #333 0.15turn 0.20turn, 
-      #fff 0.20turn 0.25turn, 
+      hsl(315, 70%, 47%) 0.20turn 0.25turn, 
       #333 0.25turn 0.30turn, 
-      #fff 0.30turn 0.35turn, 
+      hsl(315, 70%, 47%) 0.30turn 0.35turn, 
       #333 0.35turn 0.40turn, 
-      #fff 0.40turn 0.45turn, 
+      hsl(315, 70%, 47%) 0.40turn 0.45turn, 
       #333 0.45turn 0.50turn, 
-      #fff 0.50turn 0.55turn, 
+      hsl(315, 70%, 47%) 0.50turn 0.55turn, 
       #333 0.55turn 0.60turn, 
-      #fff 0.60turn 0.65turn, 
+      hsl(315, 70%, 47%) 0.60turn 0.65turn, 
       #333 0.65turn 0.70turn, 
-      #fff 0.70turn 0.75turn, 
+      hsl(315, 70%, 47%) 0.70turn 0.75turn, 
       #333 0.75turn 0.80turn, 
-      #fff 0.80turn 0.85turn, 
+      hsl(315, 70%, 47%)0.80turn 0.85turn, 
       #333 0.85turn 0.90turn, 
-      #fff 0.90turn 0.95turn,
+      hsl(315, 70%, 47%) 0.90turn 0.95turn,
       #333 0.95turn 1.00turn
 );
+}
+img {
+    border-collapse:separate;
 }
